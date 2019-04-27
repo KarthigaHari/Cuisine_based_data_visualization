@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+              integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    </head>
+    <body>
+	<div class="page-header" style="margin:1%;text-align:center;color:purple">
+  <h3>Australian Professional Open Tennis Match Dataset Visualization</h3>
+</div>
+        <div class="container-fluid" style="margin: 10px">
+           <nav class="nav nav-pills nav-fill flex-sm-row justify-content-center">
+                <a class="text-sm-centernav nav-link" href="index1.html">Visualization</a>
+                <a class="text-sm-right nav-link" href="bonus.html">Bonus1</a>
+				<a class="text-sm-right nav-link" href="bonus2.html">Bonus2</a>
+                <a class="text-sm-right nav-link active" href="#">Write Up</a>
+            </nav>
+            <br>
+             <div class="card">
+        <h4 class="card-header text-center" style="color:darkred">Assignment 2:	Interactive	Visualization Exercise</h4>
+        <div class="card-block">
+            <p class="card-text">
+               Analysis:<hr/>
+	
+	On analysis, the Australian Open Match dataset has complete match details including players, winners and country. Comparing players of same country with their corresponding opponents can help us find a pattern. 
+	
+	</p>
+	<div>Aspects Compared <hr/> <p>The aspects that were compared for a match between 2 players -  Aces, Average First Serve, Average Second Serve, Fast Serve, Double, Total, Error, Winner </p>
+	<ul>
+		<li>Aces- Good serves missed by Opponent. It contributes more to the success of the match.</li>
+		<li>Fast Serve - A speed serve is harder for the opponent to return gives the player ace points.</li>
+		<li>Total points - On a particular game this gives us total of points won because of error by opponent and won by player. This value will be proportional to success/failure of the game</li>
+		<li>Error - Used to compare the mistakes. Will be useful to see where the player makes mistake and where they need improvements</li>
+		
+		
+	</ul>
+	
+            <div>
+                Interactive Visualization:<hr/>
+
+	The visualization provides a way to view the players country-wise and compare with his opponent <br>
+	<ul>	
+	<li>At top of the page, an world map representing the number of players country-wise is shown. 
+	<ul>
+		<li>The strength of the color is directly proportional to the players count. </li>
+		<li>Horizontal legend depicts the player count and color strength</li>
+		<li>On mouse over - move over the map- Country name and count of players is shown in tooltip</li>
+	</ul>
+	<li>
+	On click, a division to compare every player with his corresponding players over the time is shown. 
+	<ul>
+		<li>Left side of the division shows the list of the players for the selected country.</li> 
+		<li>On click of any player, his corresponding opponents for every year is listed. </li>
+	</ul>
+	</li>
+	<li>
+	On selection of any opponent, a smoothed radar chart comparing the stats of both the player is shown. 
+	</li>
+	<li>
+	On selection of every player it asks to select opponent and also on varying opponents, the radar chart updates dynamically.
+	</li>
+	</ul>   <br>
+            
+    </div>
+	<div> Colors and plots <hr/>
+		<ul>
+		<li>
+			Cartogram showing number of players uses same color variation to show the strength. Range of blue color is chosen to make it look appealing. </li>
+			<li>Radarchart plot were smoothed to give aesthetic feel</li>
+			<li>Bright colors were used to show the comparison and legends were added to relate color of curve with the player being compared.
+		</li>
+		</ul>
+	<div>
+</div>           
+						
+                    
+                </div>
+            
+        <!--Scripts-->
+       
+    </body>
+</html>

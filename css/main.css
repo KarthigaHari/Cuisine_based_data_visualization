@@ -1,0 +1,85 @@
+/*//Reference :http://bl.ocks.org/d3noob/a22c42db65eb00d4e369 
+*/
+.names {
+    fill: none;
+    stroke: #fff;
+    stroke-linejoin: round;
+}
+	.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+</style>
+.details{
+    color:white;
+}
+
+.selected-country {
+    opacity: 1 !important;
+    stroke: #000099 !important;
+    stroke-width: 3 !important;
+}
+
+.list-group a {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.background-color {
+    background-color: white;
+}
+
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 2px;
+}
+#map{
+   overflow: hidden;
+   margin: 0 auto;
+   position: relative;
+   float:left;
+}
+#map_container {
+  width: 98%;
+  height: 80%;
+  margin: 1%; 
+  background-color: #fff;
+  border: 1px solid black;
+  float: left;
+  
+}
+
