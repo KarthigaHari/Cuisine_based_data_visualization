@@ -1,3 +1,4 @@
+function draw(){
 var margin = {top: 20, right: 200, bottom: 100, left: 50},
     margin2 = { top: 430, right: 10, bottom: 20, left: 40 },
     width = 960 - margin.left - margin.right,
@@ -11,7 +12,7 @@ var xScale = d3v3.time.scale()
 var yScale = d3v3.scale.linear()
     .range([height, 0]);
 	
-	
+	//console.log(document.getElementById("selected").innerHTML);
 // 40 Custom DDV colors 
 //var line_color = d3v3.scale.ordinal().range(["#48A36D",  "#56AE7C",  "#64B98C", "#72C39B", "#80CEAA", "#80CCB3", "#7FC9BD", "#7FC7C6", "#7EC4CF", "#7FBBCF", "#7FB1CF", "#80A8CE", "#809ECE", "#8897CE", "#8F90CD", "#9788CD", "#9E81CC", "#AA81C5", "#B681BE", "#C280B7", "#CE80B0", "#D3779F", "#D76D8F", "#DC647E", "#E05A6D", "#E16167", "#E26962", "#E2705C", "#E37756", "#E38457", "#E39158", "#E29D58", "#E2AA59", "#E0B15B", "#DFB95C", "#DDC05E", "#DBC75F", "#E3CF6D", "#EAD67C", "#F2DE8A"]); 
 var line_color=d3v3.scale.category10(); 
@@ -68,18 +69,22 @@ d3v3.csv("data/arizona_cusine_checkins.csv", function(error, data) {
   data.forEach(function(d) { // Make every date in the csv data a javascript date object format
     // d.date = parseDate(d.date);
   });
+  //console.log(selected_category);
   var categories = line_color.domain().map(function(name) { // Nest the data into an array of objects with new keys
     return {
       name: name, // "name": the csv headers except date
       values: data.map(function(d) { // "values": which has an array of the dates and ratings
         return {
+			
           date: d.date, 
 		  checkin: +(d[name]),
-          };
+		  };
       }),
-      visible: (name === "American (Traditional)" ? true : false) // "visible": all false except for economy which is true.
+	  
+      visible: (name === document.getElementById("selected").innerHTML ? true : false) // "visible": all false except for economy which is true.
     };
   });
+  
   
   xScale.domain([100,796]); // extent = highest and lowest points, domain is data, range is bouding box
   yScale.domain([0, 20000
@@ -294,3 +299,5 @@ d3v3.csv("data/arizona_cusine_checkins.csv", function(error, data) {
     });
     return d3v3.max(maxYValues);
   }
+}
+draw();
