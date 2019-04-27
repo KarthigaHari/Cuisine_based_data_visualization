@@ -100,7 +100,7 @@ d3.csv("data/average_cusine_rating.csv", function(error, data) {
       })
       .on("click", function(d) {
         showThisCategory(d["category"])
-        //plotBubbleChart(d["category"])
+        plotBubbleChart(d["category"])
         console.log('Function called');
       });
 
