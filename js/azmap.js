@@ -5,8 +5,6 @@ L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',{
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://hot.openstreetmap.org/" target="_blank">Humanitarian OpenStreetMap Team</a>'
 }).addTo(leafletMap);
 
-categories_list=["Bagels","Burgers","Chinese","Hot Dogs","Indian","Italian","Japanese","Korean","Latin American","Mediterranean","Mexican","Middle Eastern","Pakistani","Pizza","Seafood", "Vegan","Vegetarian","Vietnamese"]
-
 color_list=["#800000","#808000","#469990","#d64a4a","#911eb4","#3cb44b","#e6194B","f58231","#000075","#aaffc3","#9A6324","#d64a4a","#e6beff","#fabebe","#bfef45","#f032e6","#42d4f4","#000000"]
 
 var svgMap = d3.select(leafletMap.getPanes().overlayPane).append("svg")
