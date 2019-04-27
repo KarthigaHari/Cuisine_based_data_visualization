@@ -55,10 +55,10 @@ d3.csv('data/arizona_cuisine_details.csv', function (error, dataset) {
    .style("left", d3.event.pageX - 50 + "px")
    .style("top", d3.event.pageY - 150 + "px")
    .style("display", "inline-block")
-   .html((d.name) + "<br>" +"Star:" + d.stars + "Total Review: "+ d.review_count
+   .html((d.name) + "<br>" +"Star:" + d.stars + "<br>Total Review: "+ d.review_count
      + "<br>" + "Address:" + (d.address));
  })
-  .on("mouseout", function(d){ tooltip.style("display", "none");});
+  .on("mouseout", function(d){ tooltipmap.style("display", "none");});
 
 
 

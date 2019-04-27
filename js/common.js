@@ -736,6 +736,7 @@ function plotBubbleChart(name)
     console.log(data);
 
     document.getElementById("bubblechart_div").innerHTML="";
+    document.getElementById("header").innerHTML="Know more about the Cuisine - "+name;
     var svg = d3.select("#bubblechart_div").append("svg")
     .attr("width","1100")
     .attr("height","700");

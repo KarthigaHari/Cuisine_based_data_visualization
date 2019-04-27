@@ -113,11 +113,16 @@ d3.csv("data/average_cusine_rating.csv", function(error, data) {
       .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
 
   // draw legend colored rectangles
-  legend.append("rect")
+  legend.append("rect").data(data)
       .attr("x", width_r - 18)
       .attr("width", 18)
       .attr("height", 18)
-      .style("fill", color);
+      .style("fill", function(d) { return color(cValue(d));}) 
+	  .on("click", function(d) {
+        showThisCategory(d["category"])
+        plotBubbleChart(d["category"])
+        console.log('Function called');
+      });
 
   // draw legend text
   legend.append("text")
