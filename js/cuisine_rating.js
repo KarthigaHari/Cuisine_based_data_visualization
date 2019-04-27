@@ -101,11 +101,7 @@ d3.csv("data/average_cusine_rating.csv", function(error, data) {
       })
       .on("click", function(d) {
         showThisCategory(d["category"])
-<<<<<<< HEAD
         plotBubbleChart(d["category"])
-=======
-		//plotBubbleChart(d["category"])
->>>>>>> 60d9d022d49e7f879efdeb9dbb3d4b7439e71d2b
         console.log('Function called');
       });
 	  
