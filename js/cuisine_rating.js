@@ -75,6 +75,7 @@ d3.csv("data/average_cusine_rating.csv", function(error, data) {
       .style("text-anchor", "end")
       .text("Total Number of Reviews");
 
+	  var selected_category="Mexican";
   // draw dots
   svg.selectAll(".dot")
       .data(data)
@@ -100,10 +101,14 @@ d3.csv("data/average_cusine_rating.csv", function(error, data) {
       })
       .on("click", function(d) {
         showThisCategory(d["category"])
+<<<<<<< HEAD
         plotBubbleChart(d["category"])
+=======
+		//plotBubbleChart(d["category"])
+>>>>>>> 60d9d022d49e7f879efdeb9dbb3d4b7439e71d2b
         console.log('Function called');
       });
-
+	  
   // draw legend
   var legend = svg.selectAll(".legend")
       .data(color.domain())

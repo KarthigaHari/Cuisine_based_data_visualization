@@ -1,12 +1,17 @@
 function showThisCategory(name){
   console.log(name);
+  document.getElementById("linechart").innerHTML="";
+  draw();
+  document.getElementById("selected").innerHTML=name;
+  //console.log(document.getElementById("selected").innerHTML);
+  
   changeColumnVisiblity("visibility-class","hidden")
   changeColumnVisiblity(name,"visible")
 }
 
 function changeColumnVisiblity(className,property) {
     var cols = document.getElementsByClassName(className);
-    console.log("Leng:"+cols.length)
+	console.log("Leng:"+cols.length)
     for(i=0; i<cols.length; i++) {
       cols[i].style.visibility = property;
     }
