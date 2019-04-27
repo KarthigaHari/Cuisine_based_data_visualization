@@ -114,6 +114,7 @@ d3.csv("data/average_cusine_rating.csv", function(error, data) {
 
   // draw legend colored rectangles
   legend.append("rect").data(data)
+      .attr("class", "rect_check")
       .attr("x", width_r - 18)
       .attr("width", 18)
       .attr("height", 18)

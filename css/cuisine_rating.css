@@ -12,6 +12,8 @@
 .common_fade{
 	opacity: 0.2;
 }
+.rect_check{
+	cursor: pointer;}
 
 .tooltip_cr {
   position: absolute;
