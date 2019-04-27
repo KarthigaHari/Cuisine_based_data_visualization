@@ -20,6 +20,7 @@
 	<link rel="stylesheet" type="text/css" href="css/annotations.css" />
 	<link rel="stylesheet" type="text/css" href="css/leaflet.css">
 	<link rel="stylesheet" type="text/css" href="css/cuisine_rating.css">
+	<link rel="stylesheet" type="text/css" href="css/bubbleChart.css">
     </head>
     <body>
 	<div class="page-header" style="margin:2%;text-align:center;color:purple">
@@ -76,7 +77,7 @@
             <div class="card text-center" >
                 <h4 class="card-header" id = "header" style="color:darkred"> Know more about the Cuisine </h4>
 				<div class="card-block">
-					<div class="card-text">Click on the bubble to see few reviews</div>
+					<div class="card-text">Click on the bubbles for reviews. Drag to move bubbles</div>
                 	<div id = "bubblechart_div"></div>
                    
 				
@@ -154,6 +155,9 @@
 
         <script src="d3-tip.js"></script>
         <script src="d3-legend.min.js"></script>
+        <script type="text/javascript">
+        	window.setTimeout(initiliazerFunction, 1000);
+        </script>
         
     </body>
 </html>

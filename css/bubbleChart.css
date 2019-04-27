@@ -19,7 +19,7 @@ html, body {
 			text-align: center;
 		}
 		.circle-overlay {
-			font-size: 20px;
+			font-size: 17px;
 			border-radius: 10%;
 			position: absolute;
 			overflow: hidden;
@@ -29,8 +29,13 @@ html, body {
 		}
 		.circle-overlay__inner {
 			text-align: center;
+			color: white;
 			width: 100%;
 			height: 100%;
+
+		}
+		.circle-overlay__title{
+			color: :white;
 		}
 
 		.hidden {
@@ -42,3 +47,5 @@ html, body {
 		.legend-size circle {
 			fill: rgb(31, 119, 180);
 		}
+
+}

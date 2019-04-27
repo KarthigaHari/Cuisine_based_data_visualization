@@ -1,3 +1,4 @@
+
 function showThisCategory(name){
   console.log(name);
   document.getElementById("linechart").innerHTML="";
@@ -7,7 +8,15 @@ function showThisCategory(name){
   
   changeColumnVisiblity("visibility-class","hidden")
   changeColumnVisiblity(name,"visible")
+  resetAllOpacity()
+  changeColumnOpacity(name,1)
 }
+
+function initiliazerFunction(){
+  showThisCategory("Mexican")
+  plotBubbleChart("Mexican")
+}
+
 
 function changeColumnVisiblity(className,property) {
     var cols = document.getElementsByClassName(className);
@@ -16,6 +25,28 @@ function changeColumnVisiblity(className,property) {
       cols[i].style.visibility = property;
     }
 }
+
+function changeColumnOpacity(className,property) {
+    var cols = document.getElementsByClassName("fade_"+className);
+  console.log("Leng:"+cols.length)
+    for(i=0; i<cols.length; i++) {
+      cols[i].style.opacity = property;
+    }
+}
+
+function swapColumnOpacity(className) {
+    var cols = document.getElementsByClassName("fade_"+className);
+    console.log("Leng:"+cols.length)
+    for(i=0; i<cols.length; i++) {
+      if(cols[i].style.opacity == 0.2 || cols[i].style.opacity == ""){
+        console.log("opa:1")
+        cols[i].style.opacity = "1"
+      }else{
+        cols[i].style.opacity = "0.2"
+      }
+    }
+}
+
 
 function swapColumnVisiblity(className) {
     var cols = document.getElementsByClassName(className);
@@ -28,6 +59,14 @@ function swapColumnVisiblity(className) {
       }
     }
 }
+
+function resetAllOpacity() {
+    var cols = document.getElementsByClassName("common_fade");
+    for(i=0; i<cols.length; i++) {
+        cols[i].style.opacity = "0.2"
+    }
+}
+
 function plotBubbleChart(name)
 {
   console.log(name);
@@ -739,7 +778,7 @@ function plotBubbleChart(name)
     let root = d3.hierarchy({ children: data })
       .sum(d => d.value);
     let nodes = pack(root).leaves().map(node => {
-      console.log('node:', node.x, (node.x - centerX) * 2);
+      //console.log('node:', node.x, (node.x - centerX) * 2);
       const data = node.data;
       return {
         x: centerX + (node.x - centerX) * 3, // magnify start position to have transition to center movement

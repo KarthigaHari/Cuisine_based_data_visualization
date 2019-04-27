@@ -80,7 +80,7 @@ d3.csv("data/average_cusine_rating.csv", function(error, data) {
   svg.selectAll(".dot")
       .data(data)
     .enter().append("circle")
-      .attr("class", "dot")
+      .attr("class", function(d){return "dot " + "common_fade " +"fade_"+d.category;})
       .attr("r", 7.5)
       .attr("cx", xMap_r)
       .attr("cy", yMap_r)
@@ -91,8 +91,8 @@ d3.csv("data/average_cusine_rating.csv", function(error, data) {
                .style("opacity", .9);
           tooltip.html(d["category"] + "<br/> (" + xValue_r(d) 
 	        + ", " + yValue_r(d) + ")")
-               .style("left", (d3.event.pageX + 5) + "px")
-               .style("top", (d3.event.pageY - 28) + "px");
+               .style("left", (d3.event.pageX + 5 - 740) + "px")
+               .style("top", (d3.event.pageY - 28 - 179) + "px");
       })
       .on("mouseout", function(d) {
           tooltip.transition()
@@ -114,6 +114,7 @@ d3.csv("data/average_cusine_rating.csv", function(error, data) {
 
   // draw legend colored rectangles
   legend.append("rect").data(data)
+      .attr("class", "rect_check")
       .attr("x", width_r - 18)
       .attr("width", 18)
       .attr("height", 18)
