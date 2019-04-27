@@ -7,6 +7,10 @@
 
 .dot {
   stroke: #000;
+  cursor: pointer;
+}
+.common_fade{
+	opacity: 0.2;
 }
 
 .tooltip_cr {
