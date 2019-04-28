@@ -16,7 +16,7 @@ var yScale = d3v3.scale.linear()
 // 40 Custom DDV colors 
 //var line_color = d3v3.scale.ordinal().range(["#48A36D",  "#56AE7C",  "#64B98C", "#72C39B", "#80CEAA", "#80CCB3", "#7FC9BD", "#7FC7C6", "#7EC4CF", "#7FBBCF", "#7FB1CF", "#80A8CE", "#809ECE", "#8897CE", "#8F90CD", "#9788CD", "#9E81CC", "#AA81C5", "#B681BE", "#C280B7", "#CE80B0", "#D3779F", "#D76D8F", "#DC647E", "#E05A6D", "#E16167", "#E26962", "#E2705C", "#E37756", "#E38457", "#E39158", "#E29D58", "#E2AA59", "#E0B15B", "#DFB95C", "#DDC05E", "#DBC75F", "#E3CF6D", "#EAD67C", "#F2DE8A"]); 
 var line_color=d3v3.scale.category10(); 
-var ticks = [110,210,310,410,510,610,710,110];
+var ticks = [110,210,310,410,510,610,710];
 var tickLabels = ['Monday','Tuesday','Wednesday ','Thursday','Friday', 'Saturday','Sunday']
 var xAxis = d3v3.svg.axis()
     .scale(xScale)
@@ -225,7 +225,7 @@ d3v3.csv("data/arizona_cusine_checkins.csv", function(error, data) {
     .enter().append("g") //create one <g> for each columnName
       .attr("class", "focus"); 
   focus.append("text") // http://stackoverflow.com/questions/22064083/d3-js-multi-series-chart-with-y-value-tracking
-        .attr("class", "tooltip")
+        .attr("class", "tooltip1")
         .attr("x", width + 20) // position tooltips  
         .attr("y", function (d, i) { return (legendSpace)+i*(legendSpace); }); // (return (11.25/2 =) 5.625) + i * (5.625) // position tooltips       
   // Add mouseover events for hover line.
@@ -253,18 +253,24 @@ d3v3.csv("data/arizona_cusine_checkins.csv", function(error, data) {
           .attr("x2", mouse_x)
           .style("opacity", 1); // Making line visible
       // Legend tooltips // http://www.d3noob.org/2014/07/my-favourite-tooltip-method-for-line.html
-      var x0 = xScale.invert(d3v3.mouse(this)[0]), /* d3v3.mouse(this)[0] returns the x position on the screen of the mouse. xScale.invert function is reversing the process that we use to map the domain (date) to range (position on screen). So it takes the position on the screen and converts it into an equivalent date! */
-      i = bisectDate(data, x0, 1), // use our bisectDate function that we declared earlier to find the index of our data array that is close to the mouse cursor
+	  console.log(data);
+      var x0 = xScale.invert(d3v3.mouse(this)[0]); /* d3v3.mouse(this)[0] returns the x position on the screen of the mouse. xScale.invert function is reversing the process that we use to map the domain (date) to range (position on screen). So it takes the position on the screen and converts it into an equivalent date! */
+      var i = bisectDate(data, x0, 1); 
+	  console.log(i)// use our bisectDate function that we declared earlier to find the index of our data array that is close to the mouse cursor
+	  
       /*It takes our data array and the date corresponding to the position of or mouse cursor and returns the index number of the data array which has a date that is higher than the cursor position.*/
-      d0 = data[i - 1],
-      d1 = data[i],
-      /*d0 is the combination of date and rating that is in the data array at the index to the left of the cursor and d1 is the combination of date and close that is in the data array at the index to the right of the cursor. In other words we now have two variables that know the value and date above and below the date that corresponds to the position of the cursor.*/
+      var d0 = data[i - 1];
+	  console.log(d0);
+      var d1 = data[i];
+	  console.log(d1);
+	  /*d0 is the combination of date and rating that is in the data array at the index to the left of the cursor and d1 is the combination of date and close that is in the data array at the index to the right of the cursor. In other words we now have two variables that know the value and date above and below the date that corresponds to the position of the cursor.*/
       d = x0 - d0.date > d1.date - x0 ? d1 : d0;
       /*The final line in this segment declares a new array d that is represents the date and close combination that is closest to the cursor. It is using the magic JavaScript short hand for an if statement that is essentially saying if the distance between the mouse cursor and the date and close combination on the left is greater than the distance between the mouse cursor and the date and close combination on the right then d is an array of the date and close on the right of the cursor (d1). Otherwise d is an array of the date and close on the left of the cursor (d0).*/
       //d is now the data row for the date closest to the mouse position
       focus.select("text").text(function(columnName){
          //because you didn't explictly set any data on the <text>
          //elements, each one inherits the data from the focus <g>
+		 console.log(d[columnName]);
          return (d[columnName]);
       });
   }; 

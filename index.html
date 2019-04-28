@@ -113,12 +113,17 @@
 			</div>
 			<br>
 			<div class="row">
-			<div class="col-sm-12">
+			<div class="col-sm-8">
             <div class="card text-center" >
-                <h4 class="card-header" style="color:darkred"> Checkin Distribution across Arizona </h4>
-				<div class="card-block">
-					<div class="card-text">Choose a category and a business to view it's checkin distribution</div>
-                
+                <h4 class="card-header" style="color:darkred">Google Street Map - Different Cuisine</h4>
+				<div class="card-block" id="">
+					<!--div class="card-text">Choose a category and a business to view it's checkin distribution</div-->
+					<form id="myForm">
+  <select id="selectNumber" onchange="loadWC(this)">
+    <option>Choose a restaurant</option>
+  </select>
+</form>
+					<div id="chart"></div>
                    
 				
 				</div>
@@ -130,7 +135,24 @@
 				
             </div>
 			</div>
+			
+			<div class="col-sm-4">
+			<div class="card text-center" >
+                <h4 class="card-header" style="color:darkred"> Average Rating - Different Cuisine </h4>
+				<div class="card-block">
+					<div class="card-text">Choose a category and a business to view it's checkin distribution</div>
+                	<div id = "donut" style="height:65vh;padding-top:30%;"></div>
+				
+				</div>
+				
+				<div class="card-block">
+                    
+                </div>
+              
+            </div>
 			</div>
+			</div>
+			
 			<div style="display:none" id="selected">Mexican</div>
 			
 	
@@ -138,8 +160,11 @@
         <script src="http://d3js.org/d3.v4.min.js"></script>
         <script src="http://d3js.org/queue.v1.min.js"></script>
         <script src="http://d3js.org/topojson.v1.min.js"></script>
+		
 		<script type="text/javascript" src="js/d3.min.js"></script>
 		<script type="text/javascript" src="js/d3.min.js"></script>
+		<script type="text/javascript" src="js/cloud.js"></script>
+
         <script type="text/javascript" src="js/common.js"></script>
 		<script type="text/javascript" src="js/tooltip.js"></script> 
 		<script type="text/javascript" src="js/cuisine_rating.js"></script>
