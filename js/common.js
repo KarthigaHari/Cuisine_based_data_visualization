@@ -1060,6 +1060,9 @@ $('.mutliSelect input[type="checkbox"]').on('click', function() {
       drawWordCloud(text_string);
 
       function drawWordCloud(text_string){
+        document.getElementById("chart").innerHTML="";
+        document.getElementById("donut").innerHTML="";
+        console.log(text_string);
         var common = "poop,i,me,my,myself,we,us,our,ours,ourselves,you,your,yours,yourself,yourselves,he,him,his,himself,she,her,hers,herself,it,its,itself,they,them,their,theirs,themselves,what,which,who,whom,whose,this,that,these,those,am,is,are,was,were,be,been,being,have,has,had,having,do,does,did,doing,will,would,should,can,could,ought,i'm,you're,he's,she's,it's,we're,they're,i've,you've,we've,they've,i'd,you'd,he'd,she'd,we'd,they'd,i'll,you'll,he'll,she'll,we'll,they'll,isn't,aren't,wasn't,weren't,hasn't,haven't,hadn't,doesn't,don't,didn't,won't,wouldn't,shan't,shouldn't,can't,cannot,couldn't,mustn't,let's,that's,who's,what's,here's,there's,when's,where's,why's,how's,a,an,the,and,but,if,or,because,as,until,while,of,at,by,for,with,about,against,between,into,through,during,before,after,above,below,to,from,up,upon,down,in,out,on,off,over,under,again,further,then,once,here,there,when,where,why,how,all,any,both,each,few,more,most,other,some,such,no,nor,not,only,own,same,so,than,too,very,say,says,said,shall,you're,a,about,above,after,again,against,all,am,an,and,any,are,as,at,be,because,been,before,being,below,between,both,but,by,could,did,do,does,doing,down,during,each,few,for,from,further,had,has,have,having,he,he’d,he’ll,he’s,her,here,here’s,hers,herself,him,himself,his,how,how’s,I,I’d,I’ll,I’m,I’ve,If,In,Into,Is,It,it’s,its,itself,let’s,me,more,most,my,myself,nor,of,on,once,only,or,other,ought,our,ours,ourselves,out,over,own,same,she,she’d,she’ll,she’s,should,so,some,such,than,that,that’s,the,their,theirs,them,themselves,then,there,there’s,these,they,they’d,they’ll,they’re,they’ve,this,those,through,to,too,under,until,up,very,was,we,we’d,we’ll,we’re,we’ve,were,what,what’s,when,when’s,where,where’s,which,while,who,who’s,whom,why,why’s,with,would,you,you’d,you’ll,you’re,you’ve,your,yours,yourself,yourselves";
 
 
@@ -1426,7 +1429,7 @@ function readTextFile(file)
             if(rawFile.status === 200 || rawFile.status == 0)
             {
                 var allText = rawFile.responseText;
-                alert(allText);
+                drawWordCloud(allText);
             }
         }
     }
