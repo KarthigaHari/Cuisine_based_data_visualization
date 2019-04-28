@@ -1,0 +1,63 @@
+[{
+			cat: '1', name: 'delicious', value: 40,
+			desc: `
+				"Delicious, friendly staff, cool atmosphere, all around great experience!"<br/>
+				"Definitely try their eggplant and ANYTHING with pesto, it's delicious and the proportions are perfect for lunch!"
+			`
+		}, {
+			cat: '2', name: 'wine', value: 30,
+			desc: `
+				"Service is disappointing, however the wine store is lovely and has a nice selection at reasonable prices"<br/>
+				"We had a great time among friends and the staff, and the food with wine is amazing!"
+			`
+		}, 
+			
+ 		{
+			cat: '3', name: 'dinner', value: 29,
+			desc: `
+				"We've been regulars at the Apricot Tree for ages, for both dinner and dessert"<br/>
+				"Although I was full I couldn't pass up tasting each dish, and my companion lucked out since they scored half my dinner"
+				`
+		}, {
+			cat: '4', name: 'steak', value: 25,
+			desc: `
+				"After reading others reviews about the steak frites and location we decided to give it a try"<br/>
+				"The steak tartare was awesome"
+			`
+		}, {
+			cat: '5', name: 'cheese', value: 24,
+			desc: `
+				"I had the Quebec raised lamb w lentils and veg_ My kids had the flank steak w blue cheese sauce and my husband had the scallops"<br/>
+				"The bagel with chive cream cheese with smoked samon and capers was all tasty, but not a stand out item"
+			`
+		}, {
+			cat: '6', name: 'bread', value: 23,
+			desc: `
+				"We selected breads , warm and flavorful,  from a tray brought to our table often"<br/>
+				"In my shame I must confess that the best I could do was to sop up the remaining broth with more of that tasty bread"
+			`
+		}, {
+			cat: '7', name: 'salad', value: 22,
+			desc: `
+				"We had the kale salad, duck confit meatballs and the seared scallops"<br/>
+				"One of my favorite parts of the meal was the date salad"
+			`
+		},  {
+			cat: '8', name: 'dessert', value: 21,
+			desc: `
+				"Dessert was a chocolate type of cake mousse fondant wich was perfect for a chocolate lover!"<br/>
+				"Dessert was some kind of cake with rum just poor in it"
+			`
+		}, {
+			cat: '9', name: 'chocolate', value: 18,
+			desc: `
+				"The chocolate fondue was pretty run of the mill but it had some creme puffs as a dipping options which I liked"<br/>
+				"I will dream about that chocolate souffle until the day I die_ It was THAT good"
+				`
+		}, {
+			cat: '10', name: 'chicken', value: 17,
+			desc: `
+				"For entrees, we had the bone-in pork chop, brick chicken and the scallops & pork belly, and they were all fantastic"<br/>
+				"We ordered chicken and waffles, steak frites, 1_2 dozen oysters, and cocktails"
+								`
+		}];

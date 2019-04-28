@@ -1,0 +1,71 @@
+		let data = [{
+			cat: '1', name: 'bar', value: 32,
+			desc: `
+				"just a restaurant has a great bar and a outside deck with one of the best views of Las Vegas"<br/>
+				"Sit at the bar and get to know your neighbors!"
+			`
+		}, {
+			cat: '1', name: 'burger', value: 31,
+			desc: `
+				"my order is always the same: Veggie burger, with cheese, side of soup and fruit"<br/>
+				"We usually get the bacon cheeseburger"
+			`
+		}, 
+			
+ 		{
+			cat: '2', name: 'cheese', value: 27,
+			icon: 'img/lodash.svg',
+			desc: `
+				"I order a different cheesecake each time because they are all delicious"<br/>
+				"Mac and cheese was creamy and good not over cooked"
+				`
+		}, {
+			cat: '2', name: 'fries', value: 25,
+			icon: 'img/momentjs.png',
+			desc: `
+				"The fries were hot and had a nice salt & pepper seasoning"<br/>
+				"One star loss for the fries which were a little oily and limp"
+			`
+		}, {
+			cat: '2', name: 'salad', value: 23,
+			icon: 'Numeral.js',
+			desc: `
+				"club sandwich and cobb salad always with a side of of greek fries"<br/>
+				"Some of my favorite dishes include the french dip, the bbq chicken salad, and the balsamic glazed chicken"
+			`
+		}, {
+			cat: '3', name: 'drinks', value: 21,
+			icon: 'img/bootstrap.svg',
+			desc: `
+				"For a bar, they have great food! Drinks are cheap and good happy hour deals"<br/>
+				"The drinks prices are decent but best during happy hour"
+			`
+		}, {
+			cat: '3', name: 'beer', value: 21,
+			icon: 'img/ember.png',
+			desc: `
+					"I was not happy with the bad service and then asked what beer might match my favorite beer"<br/>
+					"The draft beer and wine lists were solid and the cocktails were pretty good"
+			`
+		},  {
+			cat: '4', name: 'dinner', value: 21,
+			icon: 'img/atom.png',
+			desc: `
+				"We had dinner in the patio, which was lovely"<br/>
+				"By the end of dinner, everyone's plate was empty"
+			`
+		}, {
+			cat: '4', name: 'meal', value: 15,
+			icon: 'img/chrome-devtools.svg',
+			desc: `
+				"menu was oddly limited and had nothing in the way of sandwiches or other medium-sized meals"<br/>
+				"the dining experience was about me and my wife having  wonderful meal together"
+				`
+		}, {
+			cat: '4', name: 'breakfast', value: 12,
+			icon: 'img/jenkins.png',
+			desc: `
+				"Great food and good breakfast atmosphere"<br/>
+				"All in all, the Breakfast Platter didn't hit the spot at all"
+							"			`
+		}];

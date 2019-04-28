@@ -1,0 +1,63 @@
+[{
+			cat: '1', name: 'salad', value: 43,
+			desc: `
+			"The Leo has to be one of the best salads in Charlotte"<br/>
+			"Fried chicken: sour pickle brine, warm mushrooms and potato salad, soft egg"
+			`
+		}, {
+			cat: '2', name: 'pita', value: 40,
+			desc: `
+				"Hummus, pita & that lentil soup are better here than anywhere else in the valley"<br/>
+			"The falafel and hummus comes in a pita pocket filled with tahini, tomatoes, pickles, cabbage, cucumbers, and lettuce"
+			`
+		}, 
+			
+ 		{
+			cat: '3', name: 'greek', value: 40,
+			desc: `
+				"Greek food is as good as any other Greek restaurant that I've ever been too"<br/>
+				"The food was ok, not great the Greek salad was not impressive it didn't even have onions the chicken was tasty"
+				`
+		}, {
+			cat: '4', name: 'fresh', value: 37,
+			desc: `
+				"Amazing fresh ingredients, everything is made from scratch, and wonderful fast and friendly service"<br/>
+				"I'm not so sure that the strawberries were wild as advertised, but they were fresh!"
+				`
+		}, {
+			cat: '5', name: 'hummus', value: 32,
+			desc: `
+				"My husband and I love Mediterranean food and we love hummus and butternut squash ravioli"<br/>
+				"All of the grilled meat is good as is the baba ganoush and hummus"
+			`
+		}, {
+			cat: '6', name: 'gyro', value: 31,
+			desc: `
+				"I had the gyro sandwich with fries"<br/>
+				"We have gotten the gyro sandwich and the chicken alfredo and my kids are hooked"
+			`
+		}, {
+			cat: '7', name: 'meat', value: 25,
+			desc: `
+				"The pita was one of the best ones I've had, they were loaded with meat"<br/>
+				"One of our gyros had some relatively dry meat in it"
+			`
+		},  {
+			cat: '8', name: 'lamb', value: 23,
+			desc: `
+				"I went with my boyfriend he got the lamb kabob and i got the chicken plate"<br/>
+				"The bite i had of lamb was also very good my boyfriend wished it was a little more on the medium side but everyone has there own preference"
+			`
+		}, {
+			cat: '9', name: 'falafel', value: 19,
+			desc: `
+				"The falafel sandwich and fries are fantastic, and I think only about 9 bucks"<br/>
+				"There are plenty of other good falafel_shwarma places around that won't give you a hard time over a bottle of water"		`
+		}, {
+			cat: '10', name: 'shawarma', value: 17,
+			desc: `
+					"My favourite beef shawarma wrap I've ever had!"<br/>
+					"Beef and lamb shawarma plate so good must try"
+								
+				`
+		}];

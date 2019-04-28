@@ -1,0 +1,62 @@
+[{
+			cat: '1', name: 'sushi', value: 132,
+			desc: `
+				"I love how they have no rice sushi options"<br/>
+				"Ambiance is relaxed and friendly, service is efficient, price range is reasonable, sushi is delicious"
+			`
+		}, {
+			cat: '2', name: 'ramen', value: 48,
+			desc: `
+				"They also have a stamp card if you fall in love with their ramen and decide to eat there more than once"<br/>
+				"We have been to Japan and the ramen is similar in taste"
+			`
+		}, 
+			
+ 		{
+			cat: '3', name: 'rolls', value: 40,
+			desc: `
+				"My favorites are the Arizona, Hurricane, Tiger, Kee, Salmon Avacodo, and the California rolls are the best!"<br/>
+				 " Large selection of specialty sushi rolls, fav is the Lotus on Fire roll"
+				`
+		}, {
+			cat: '4', name: 'fresh', value: 36,
+			desc: `
+				"Hip decor, reasonable prices and most importantly FRESH ingredients!"<br/>
+				"In desert: green tea soft ice-cream, mocha cake, and of course fresh fruits"		
+				`
+		}, {
+			cat: '5', name: 'rice', value: 34,
+			desc: `
+				"I would definitely come back! Next time for their rice bowls!"<br/>
+				"The chicken and the pork were both delicious the best healthy chicken and rice combo I've experienced"
+			`
+		}, {
+			cat: '6', name: 'fish', value: 28,
+			desc: `
+				"The rice tastes wrong, the fish is cut wrong"<br/>
+				"We ordered a variety of items on the menu including smoked monkfish liver, beef tongue and many different skewers"
+			`
+		}, {
+			cat: '7', name: 'spicy', value: 28,
+			desc: `
+				"The spicy tuna was great but it was an even toss up of good and not so good rolls"<br/>
+				"Just had a simple lunch_  Spicy tuna roll, salmon and yellow tail"			`
+		},  {
+			cat: '8', name: 'salmon', value: 23,
+			desc: `
+				"Their salmon sushi pizza is the best I have had, anywhere"<br/>
+				"The Viva Las Vegas roll looked and tasted great. My husband really liked the tuna_  Salmon was OK, I've had better"
+			`
+		}, {
+			cat: '9', name: 'sashimi', value: 23,
+			desc: `
+				"If you're only going for a good dose of sashimi though I'll highly recommend it !!"<br/>
+				"Also had their 6 piece sashimi platter that was super fresh and amazingly good which had 2 pieces of fresh Uni"			`
+		}, {
+			cat: '10', name: 'soup', value: 17,
+			desc: `
+			"For the lobster, what's not serverd is used to make the best miso soup that I've ever had"<br/>
+			"We really enjoyed the steaming hot miso soup perfectly balanced not too salty or bland"
+								
+				`
+		}];

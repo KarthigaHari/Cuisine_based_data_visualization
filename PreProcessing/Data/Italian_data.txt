@@ -1,0 +1,61 @@
+[{
+			cat: '1', name: 'pizza', value: 120,
+			desc: `
+				"If you want to choose your own toppings, then head on down to that infamous sub-par pizza joint"<br/>
+				"And the pizza, they do it right_ Lil' Baci has a savoury and seasoned tomato sauce base that compliments the four cheese"
+			`
+		}, {
+			cat: '2', name: 'pasta', value: 39,
+			desc: `
+				"Grab a classic white-clothed, candle-lit table and dip your focaccia in olive oil and balsamic before ordering whole wheat pasta"<br/>
+				"The lasagne was good but a bit burnt on top which I didn't like_ The Alfredo pasta was flavourless"
+			`
+		}, 
+			
+ 		{
+			cat: '3', name: 'sauce', value: 36,
+			desc: `
+				"The cream sauce tasted like flour paste and flooded the pasta, The red sauce was not acceptable for an italian restaurant"<br/>
+				"Made daily with sauce from scratch, I highly recommend the Fettuccine Alfredo"
+				`
+		}, {
+			cat: '4', name: 'salad', value: 34,
+			desc: `
+				"The pizza is delish, the salads are sooooo good"<br/>
+				"My wife and I were regulars for wings on Wednesday and they have changed recipe for the sauces on the wings, as well as the mista salad"
+			`
+		}, {
+			cat: '5', name: 'cheese', value: 28,
+			desc: `
+				"They also have pretty good cheese steaks"<br/>
+				"Started with the Drunk Bread and it was tasty. A unique combination of crusty bread and cheese"
+			`
+		}, {
+			cat: '6', name: 'bread', value: 27,
+			desc: `
+				"Worth 5 stars for the garlic bread alone, but there's oh so much more"<br/>
+				"Amazing crusty bread with a huge portion, they don't skimp"
+			`
+		}, {
+			cat: '7', name: 'wine', value: 25,
+			desc: `
+				"Italian Risotto that daily chef menu that was Chicken by White wine sauce"<br/>
+				"It's BYOB but the recently opened a bar and they have a great wine selection"			`
+		},  {
+			cat: '8', name: 'fresh', value: 25,
+			desc: `
+				"The sauce is sweet like a real Italian pizza, the crust is crispy and tastes extremely fresh"<br/>
+				"The food here is basic italian_ But done really well_ The salad is cold, crisp and fresh"
+			`
+		}, {
+			cat: '9', name: 'amazing', value: 23,
+			desc: `
+				"The Italian food her is truly amazing"<br/>
+				"The pizza was simply AMAZING. The crackling crispy crust was the best I've had in Tempe"				`
+		}, {
+			cat: '10', name: 'friendly', value: 17,
+			desc: `
+				"The wait staff was very friendly and service was perfect"<br/>
+				"The space was clean and tasteful with a really interactive and friendly staff"
+								`
+		}];
