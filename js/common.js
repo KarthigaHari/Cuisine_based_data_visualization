@@ -5,6 +5,7 @@ function showThisCategory(name){
   draw();
   document.getElementById("selected").innerHTML=name;
   //console.log(document.getElementById("selected").innerHTML);
+  load_dropdown(name);
   
   changeColumnVisiblity("visibility-class","hidden")
   changeColumnVisiblity(name,"visible")
@@ -73,7 +74,7 @@ function plotBubbleChart(name)
   let data;
   switch(name)
   {
-    case "American (Traditional)":
+    case "American":
     data = [{
       cat: '1', name: 'bar', value: 32,
       desc: `
@@ -1084,8 +1085,8 @@ var word_count = {};
           }
 
         var svg_location = "#chart";
-        var width = 900;
-        var height = 900;
+        var width = 960;
+        var height = 500;
 
         var fill = d3v3.scale.category20();
 
@@ -1141,22 +1142,29 @@ var word_count = {};
 			  final_neg=negative_count/(positive_count+negative_count)*100;
 			  console.log("Out"+positive_count/(positive_count+negative_count)*100);
 			  console.log("negative"+negative_count/(positive_count+negative_count)*100);
+			  draw_piechart(final_pos);
 			  
-			  		// Data
-    var value = final_pos;
-	console.log(value);
-    var text = Math.round(value*100) + '%'
+
+        }
+		
+        cloud().stop();
+      }
+	  
+	  function draw_piechart(posvalue){
+		  // Data
+    var value = posvalue
+    var text = Math.round(value * 100) + '%'
     var data = [value, 1 - value]
     
     // Settings
-		var width = 300
-    var height = 150
+		var width = 350
+    var height = 200
     var anglesRange = 0.5 * Math.PI
     var radis = Math.min(width, 2 * height) / 2
-    var thickness = 75
+    var thickness = 50
     // Utility 
 //     var colors = d3.scale.category10();
-    var colors = ["#0C7BDC","#FFC20A"]
+    var colors = ["#0C7BDC", "#FFC20A"]
     
     var pies = d3v3.layout.pie()
     	.value( d => d)
@@ -1192,8 +1200,217 @@ var word_count = {};
     	.attr("class", "label")
     	.attr("text-anchor", "middle")
 
-        }
-		
-        cloud().stop();
-      }
+	  }
 	  
+		  function load_dropdown(category){
+var dropdown = document.getElementById("selectNumber");
+console.log("dropdown"+category);
+
+var French_map = new Map([["The House Brasserie","-4TMQnQJW1yd6NqGRDvAeA"],
+["Metro Brasserie & Bar","atNpoWy_XrhT9EUIEP6azg"],
+["Voltaire Restaurant","eb7wb5yABe12tSoeCpLSbw"],
+["Scratch Pastries & Bistro","0d6kx6Jlocw77y1J9nbqMA"],
+["Au Petit Four","b3wgQ6CccBO8fgvlbS0M1Q"],
+["Vincent's On Camelback","Tl2nqtPXlLbAG3qkUYVM2g"],
+["Scratch","OZC42gnhlJ_auXduDRfMoQ"],
+["Boulevard Cafe","L7wtHDiTtp6S_DzjJaXwoQ"],
+["Truckin' Good Food","kYATtIsqVEoawS47UcSlDA"],
+["Cafe Bink","ohMpNug5zWNxOlL6ShG7Ig"],
+["Razz's Restaurant & Catering","K64Uw3a2Enh2MznpwRHWKQ"]]);
+
+var Indian_map = new Map([["Marigold Maison- Paradise Valley","iE71iwcSljg3xm2GB2Y9aA"],
+["Curry & Scoop","KvRh-exPg_KegOM_HXeskw"],
+["Indian Paradise","LFfYe-hh1NKFtUKV3LUgfg"],
+["New India Bazaar","_DiGwfdiH913E4LURwb2qg"],
+["Copper Kettle","TElfyEowMFTPR1gAwMLcNQ"],
+["Mantra Indian Cuisine","CNx_ie_OvjJHZLZ6yEO8UA"],
+["Star of India","yfHYCkQaupRzWU8FIgxUPg"],
+["Indian Village","x1GM1mzeDx4ARUGKV8n98Q"],
+["Mirchi Indian Cuisine","AgnnYOtOmSr3W_vUmSIeaw"],
+["Copper Kettle","QT4Ub4DlaDX52vdnKutD0A"],
+["Aachi Southindian Kitchen","PQTtKaBK_WdvLm-zp4fQ1g"],
+["Nirvana Indian Cuisine","prFx0Kg92PfPkoU8OY4KxA"],
+["Khyber Halal","zNGYsFeG_7XEBodbtfux5Q"],
+["Guru Palace","VoHTd4QkPGWXl6IGI72isQ"],
+["Haldi Indian Cuisine","XANbZSZLGPSMV1QPzPXVtw"],
+["Paradise Biryani Pointe","TAnzFr9NixvCbvUdJMWL5Q"],
+["Bombay Palace","q7T-qCW0WLemnnLt88OuWQ"],
+["Twisted Curry","RU6E7WsAfsTRcjXxH1Lo5A"],
+["Passage To India","KfxPrJ5PzgFRm2XltnbBLQ"],
+["Woodlands Vegetarian South Indian Kitchen","GiDPLKtTfNHTb0koEWIz2g"]]);
+
+var Itailan_map = new Map([["La Cucina Bistro & Wine Bar","tR4VVIdzcJCQus4GUFq3IA"],
+["Pizza People Food Truck","scoJNOqcw2peNlO31UYTaA"],
+["Maui Pasta","Mnu3EPpuzu3UUN1PIwFRoQ"],
+["Lucky's Pizza","pt7p4klGicvPZe04mhhVGQ"],
+["Pizza A Metro","VRC7J-ahI4em9ddhihxq5w"],
+["Basilico Italian Restaurant","2ehEw8EFYVwefZTxDeiERw"],
+["Adela's Italian","_e3rChyednoh47n2cjGv2w"],
+["Dolce Vino Wine Bar Italian Cuisine","dhaSDuAoZI0K3hp8aU7otQ"],
+["Ray's Pizza","c33m1IMz1N7S1-sqTbsqRA"],
+["Pubblico Italian Eatery","6Leb5-5Wl7OfPM12LaFQeA"],
+["DeNora's Ristorante","CCs5domumJRZ3-Blpt8jTw"],
+["Tony's Italian Delicatessen","Ks13abA-KZWAA6FMQagQmg"],
+["Pasta -N- More","3h9K-ZsuG0PwhmyiPrXKhA"],
+["L'Amore Italian Restaurant","ZVtjS8Hvq2a6SxHxlehPGg"],
+["Sbarro","vlc_yP8dfz8CGE6JRMKBZA"],
+["Basil & Garlic Bistro","4qQVf2lt-47VcQ4v54PEXQ"],
+["Pasto di Forno","GzYAIjVULpRrFV2dQMKDog"],
+["Michael's Pizza","rAxKaT0cCtOuUaSt0x8pQg"],
+["Leoni's Focaccia","Eb97gjJ6mkcx7Y-tFObjEw"],
+["Casa Mia","e_BiI4ej1CW1F0EyVLr-FQ"]]
+);
+
+  var Japanese_map = new Map([["Crazy Sushi & Crab","R_M4P9XetEM-aLE7eHdthw"],
+["Yama Sushi House","J9kvWCw5FGTCjEFBaB0nEw"],
+["ShinBay","4gwh0q7JsdzHIm_pdYUlZg"],
+["Sushi Kee","3b-jZX9Ms0U9B2Oy_ZmNMA"],
+["Posh Improvisational Cuisine","fI9ErCUGY8rXRPBbatcxMA"],
+["Samurai Sam's","3HU3V2AYuVUxdd_Q5Nv5Vw"],
+["Sushi San","IEVrILZ7bkuJMYKsbAfWaQ"],
+["Yoko Fast Food","J7rkQISD48jXgdM6UxNAbw"],
+["Yasu Sushi Bistro","oZcbn7ENit23xbCsyu9xbA"],
+["Sushi Sen","Wg4jlAgOUB51aX1c3ex9GQ"],
+["Pure Sushi","R1oI13c1oNxE91wkjYDeow"],
+["Jin Shabu","Ij6Q806LeOvFt3XWVpJ9sg"],
+["Enjoy Sushi Café","gU7xFSbbu9KX4OSBhG9ElA"],
+["Sarku Japan","J8hNZEebgXK8-LWBXHVInA"],
+["Haiku Tokyo","SfvxPlsZrvyPXbuAW8KCMw"],
+["Teharu Sushi","35Z23ZztQCsJdASRbU69Vg"],
+["Sushi Fix","U5ZlFP1kBFzlmnaIn1f9sQ"],
+["Maguro Sushi and Ramen","dl6mrYTQQoj03Im_Nntixw"],
+["Blu Sushi","2r6UD7ExSMrK0LGeglquDA"],
+["Chix Char Broiled Grill","7NXSKpruXOrm9_INkZAFEQ"]]);
+
+var Mediterranean_map = new Map([["Pita Kitchen - Arrowhead","Q8GBjqGjamI3b2ZaPQNa_Q"],
+["Wessen Int'l Kitchen","Y3awsAE8mFdCG8nwEXWF8w"],
+["Sheba's","YR202Rbw0E4aiUJNeAJjOg"],
+["Greek Palace Mediterranean","WPmOztfJVgOq04rwPIQTUg"],
+["Pitta Souvli","Lsy_RA1xk9qHFLzLNWKBww"],
+["TRES Tempe","SKQU3a1CbX3mHxilRvM3GQ"],
+["Pita Di Vita","L3Wbv_0hHpW1Izi2li6Ugw"],
+["Paradise Mediterranean Grill","6zkpirZ4qCfsbd33unJ5nQ"],
+["Gyro House","GQxpWDw3MuCwAMV9BA-62w"],
+["George's Famous Gyros & Pasta","cq6SQkWKVT3TH-6YzGFn4g"],
+["Eden's Grill Inn","G8k2E3oYHHl2o4lNJQwR-g"],
+["Doner Kebab Chef RD","_lD9Y_0OfzZjfz5s-FVwqQ"],
+["Gyros Plus","AW66lAeZQW3ss38HjB9ZaA"],
+["Rania's Kabob Grill","6Cl15LapBVhw4ZfBIeVJJA"],
+["Mashawi Lebanese Grill","a6asAPtLHfWG871UBizACw"],
+["KOVO Modern Mediterranean","SJbXs2aVMhFawgjCcbH8aQ"],
+["Pita Cafe","89Eqssb01O4-3-btGyvXoQ"],
+["Yo Pauly's NY Pizza","llCxryWr8j1S39tusYCWxg"],
+["Sunset Bistro","DGOWO87MQmA4-2swRLK2DA"]]);
+
+var Mexican_map = new Map([["Pollo Picante","dddUz7IweLuFYelc3ZIyNA"],
+["Taqueria Yaqui","02eESJZNF3qigrJ3GNRgIQ"],
+["Sonora Mesquite Grill","VoTi4yVhTVyFdmxUpoyUsg"],
+["Mi Cocina","gT4gngtGKYOW-jl5UIBahg"],
+["El Nuevo Taquito","M9aTtOeOIG-EOLeHNgkKfQ"],
+["Centro Botanero Salsitas","Scs-a2ybPdeT_mb7uZyLkQ"],
+["Dilla Libre Gourmet Quesadillas Food Truck","A2eA3LRbptrexCGw8fu67Q"],
+["El Chiltepin Mexican Food","pNSHrFBlwWgTY9es9sdEWA"],
+["Tortas Ahogadas Guadalajara","ETSHD1lX0xcd2qInwiXxzA"],
+["Mariscos  Bahia De Guaymas","wOw-YvucvqNHDhwltGsNpQ"],
+["Cocina Madrigal","9MVKjEMN5T59uzG1xoD2BQ"],
+["Hal O Penos Mexican Cafe","RZjCS8U_UuZaAmo5YawkOg"],
+["Comedor Anita","keChsvTIWsPUc4KX-ayRVw"],
+["Tony's Cafe","9OX_55wAPyuKKI6Zdp7qag"],
+["Rita's Burritos","_H4GXECi4nHfJTz4dsQV_w"],
+["Angelina's Fry Bread","twrgw3ZaMEiS87sN5ahuuw"],
+["ALMA","IcSr0gUNSgVvjsgqSEKnbw"],
+["Sin Son Nay","e-VnK6aV87kpu1dMQJB7fQ"],
+["Pacifica Ceviche","DmAKN7KxGLFXGqAk23EDHg"],
+["Vaquero's","CIU0NCEOof6qF6AasxUvTA"]]);
+
+var Mideast_map = new Map([["AZ Kabob House","Er2XAYN8l1BadlYFwiPb9g"],
+["Toh Zan Nagasaki Grill","kO1-ZswCgQak2beKUMaYRw"],
+["Shawarma Corner","Ofr0PzgcDOv9Fy5xqsbGhQ"],
+["Paprika Mediterranean Experience","bJWujT6cMgdUP-aXy6AitQ"],
+["T&J Gyro and Burger","EFHpf_-SPzShCYiS-nMPWw"],
+["Caroun","9SaFi9c_imgP8LqeJC1YEA"],
+["Abdeen International Market and Cafe LLC","zNGJKwCV6r1BzA4pm3eC5Q"],
+["Al-Hana Restaurant","0ccI-aZfoqD4PteESpfShg"],
+["ZK Grill","OwZM33ZI8LZVknaLICWIhw"],
+["Flaming Kabob","YbweWBgYj9T3VqMFJcQlOw"],
+["Mandi House","6-ZXctu-Duee3rGY3lC-uQ"],
+["Alzohour Market","njaKms2uQcdTtlI0urqPaA"],
+["Saba's Mediterranean Kitchen","len2nrEtgD9bjnoYSyLPjA"],
+["Pita Heaven","W5l5_CmHd-n1CDTHdEkYTw"],
+["Pita Shack","YZGAUc8CaWWc6ICSfeecoA"],
+["Zabari Mediterranean Grill","ahfAFuFHO9tfFkoBIkVdmg"],
+["Bowl of Greens","HyzHidtQXC4JIULtSbk3NA"],
+["Tasty Grill","CyaiHieU5WcosKWIwyOX9g"],
+["Zeta's Grill","X1S8u_cFfBpdWfvQBo_BqA"],
+["YS Restaurant","_BJdRw73rGb35ofd3ElTUA"]]);
+
+var Thai_map = new Map([["Tum Nak Thai","vMnB2Cz3c1Io1IEyeLLVOA"],
+["Sa Bai On The Fly","EyE2NntpQyVPaLX7gSC9dA"],
+["Chao","f25NsTObxX0NEhBVm44-GA"],
+["Thai Patio","C6MG3vrloHF8h9PPvZNiJA"],
+["Bao Chow","7eJ5j1paJciRBPbRYU8u1A"],
+["Asian Corner Cafe","JNlxqS6xX5qgsb90eDu8TQ"],
+["Siamese Kitchen","g_6gQKZxj9HHbTa1OaUtnQ"],
+["Tom Yum Thai Surprise","4-Ub64zwqopWZeOFsTYTzA"],
+["Thai Chili To Go","uKF_BmC-FwOLY-7Gtm1OSg"],
+["Tasty Thai Restaurant","l3bmBkr8_Pw3G-QkX0tPrw"],
+["Thai Plates Cuisine","miySsDV_1YKS3EqqGwblQQ"],
+["Pho Number One","uoZwJJaplLsktVrRw0JiQw"],
+["Sala Thai Peoria","8-F2JKHSCbgLQ55JxGU9gg"],
+["5 R Cha Thai Bistro","B5E_Qp3R1q0oRlzbYaWIkQ"],
+["Tipp's 88 Thai Restaurant","7eEfpzUTAd1hAxXKlLQaJA"],
+["Jasmine Thai Cuisine By Kelly","9vn0tLOpiGjSUp_mCI0ZLA"],
+["Ginger Zing","w3RH9W99ZIKvw0Qgibdn4w"],
+["ThaiTini","GJ9CgvTBKaDb9qLFEBbzHg"]]
+);
+
+var American_map = new Map([["Hometown Dogs","WqL96qA0l3ewibg8j1U-0A"],
+["Horizon Room","T_1Q5-7yUyAW5jFe2N8eUg"],
+["American Legion Post 35 - Mathew B Juan","CY8fjeXcaP9vsR0NERfgw"],
+["Worth Takeaway","SSCH4Z2gw-hh2KZy7aH4qw"],
+["Monroe's Downtown","qJl8r3R7xqecjNcUkcteRQ"],
+["ATL Wings Your Way","ArI4L2dLFa_U4ecu6UIBMA"],
+["Bakie Bites Bakery","gxRHcGs9usejqTGrM5_AiQ"],
+["Rock-n-Roll Fingers","i5snLVanPG1R9foC0QfkXQ"],
+["Old Glory Cafe","eAuPhflD_h9Xux-LlIWu9A"],
+["Charlie D's Catfish & Chicken","1mkDrJRu3VABKy95gxD-Hg"],
+["Cuff","2RsLaIEnNUIzjQyCvPCNWA"],
+["El Dorado Bar and Grill","QmUKLiLynDktbtwV_vQXw"],
+["Starpointe Cafe","T1CJ_QHjlAKzNJkNMWkh8Q"],
+["The Great American Grill","oR0gq3wNyDrpDu1FQNtB3Q"],
+["International House of Food","JkzqS4JDOpoHrj534rzvAA"],
+["CHAR'D Brisket Dogs + Burgers","ewd7sVeRLWz9YzuTsvwuwg"],
+["Betty's Rooste","bR23zlcVESo_vnBlCLBpwQ"],
+["Al's Gyro's","A2J7d9UxD40rVgjaKflVhw"]]);
+
+var Chinese_map = new Map([["Yao Fine Chinese Cuisine","cmsAFAymfVoBitSF8R6GKw"],
+["King Wok","tK-PQOhZo94fonbQVXaOSg"],
+["Jade Palace","omisgpMWACc0eL6rKGjAGQ"],
+["Good China Restaurant","Fif1uzIU95ttv6kbtRg0ZA"],
+["Szechuan Cuisine","9TWQ9TDxC11oJat-W5AIhA"],
+["Dragon Island Chinese Restaurant","CrM_FY9NIoDWudQYHlO7UQ"],
+["Szechwan Noodle","T0ea32kBf7L33XUhIdwjbA"],
+["YC's Mongolian Grill","JhEtJbGjAqKDHCZ11i3qoQ"],
+["Wei wok","_xgxCB0OY0PmlSL4FFBBZg"],
+["Que Huong Restaurant","B1TlRyjCW3Ygkp95MACffA"],
+["Big Bowl Restaurant","qMJCVx6-ZYvZQHlfrZ_cug"],
+["Dim Sum Cafe","tnvZOd2vNCLPQS1KEZxqog"],
+["Jade The Taste of China","sWeVNiPulXsD8PWhEtn9Ew"],
+["Yi's Chinese Restaurant","_287i8ZeEf0H1LiqPhyvBg"],
+["Devil's Mo","CpJRzbebSyHwOFNsOixK1w"],
+["Song San","ZKWGMUV_XqxtISRcDGUnrA"],
+["George & Son's Asian Cuisine","UUtWoDyREiy9MPdtTRFUYQ"]]);
+// Loop through the array
+var word=category+"_map";
+//console.log("val"+eval(word));
+var keys=Array.from(eval(word).keys() );
+console.log(keys);
+dropdown.length=0;
+for (var i = 0; i < keys.length; ++i) {
+    // Append the element to the end of Array list
+    dropdown[dropdown.length] = new Option(keys[i], keys[i]);
+}
+
+		  }
+		  
+//		  load_dropdown("Mexican");

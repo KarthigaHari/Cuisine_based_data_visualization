@@ -116,8 +116,13 @@
 			<div class="col-sm-8">
             <div class="card text-center" >
                 <h4 class="card-header" style="color:darkred">Google Street Map - Different Cuisine</h4>
-				<div class="card-block" id="cloud_container">
+				<div class="card-block" id="">
 					<!--div class="card-text">Choose a category and a business to view it's checkin distribution</div-->
+					<form id="myForm">
+  <select id="selectNumber">
+    <option>Choose a restaurant</option>
+  </select>
+</form>
 					<div id="chart"></div>
                    
 				
@@ -130,12 +135,13 @@
 				
             </div>
 			</div>
+			
 			<div class="col-sm-4">
 			<div class="card text-center" >
                 <h4 class="card-header" style="color:darkred"> Average Rating - Different Cuisine </h4>
 				<div class="card-block">
 					<div class="card-text">Choose a category and a business to view it's checkin distribution</div>
-                	<div id = "donut"></div>
+                	<div id = "donut" style="height:65vh;padding-top:30%;"></div>
 				
 				</div>
 				
