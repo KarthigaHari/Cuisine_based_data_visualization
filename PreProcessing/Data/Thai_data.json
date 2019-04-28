@@ -1,0 +1,65 @@
+{
+			cat: '1', 
+			name: 'curry', value: 72,
+			desc: `
+				"It was the best Thai Curry i had"<br/>
+				"We ordered curry with rice"
+			`
+		}, {
+			cat: '2', name: 'rice', value: 52,
+			desc: `
+				"The rice was dry. Loved the dessert"<br/>
+				"I ordered an order of hummus, falafel, and a chicken schwarma"
+			`
+		}, 
+			
+ 		{
+			cat: '3', name: 'spicy', value: 44,
+			desc: `
+				"Pita bread is so outrageously good"<br/> 
+				"The plain pita is tender and fresh"
+				`
+		}, {
+			cat: '4', name: 'soup', value: 37,
+			desc: `
+				"The dinner's best part was hot soup with thai curry"<br/>
+				"Thai restaurant's soups have a very different taste"
+				`
+		}, {
+			cat: '5', name: 'beef', value: 30,
+			desc: `
+				"My favourite of the night was the Grilled Beef Heart with Chili Lime Salsa"<br/>
+				"I like the sun dried beef a lot"		
+				`
+		}, {
+			cat: '6', name: 'rolls', value: 23,
+			desc: `
+				"Favs include their vegetable egg rolls , pineapple fried rice, pad thai, and the currys"<br/>
+				"Can't say more than have the fresh and spring rolls and as much pad Thai as you can get your hands on!"
+			`
+		}, {
+			cat: '7', name: 'noodles', value: 29,
+			desc: `
+				"Great Pad Thai & Drunken noodles!"<br/>
+				"Thai rice noodles stir fried with sweet & sour tamarind sauce"
+			`
+		},  {
+			cat: '8', name: 'shrimp', value: 24,
+			desc: `
+				"Stir-fried shrimp with curry powder, egg, onion and chili garlic sauce"<br/>
+				"For our mains we had the garlic shrimp and Pad Thai_ Neither was impressive"
+			`
+		}, {
+			cat: '9', name: 'green', value: 21,
+			desc: `
+				"My favorite is the green curry"<br/>
+				"Green Curry with bamboo shoots, kaffir lime leaves, basil leaves, green peppers and coconut milk"	
+			`
+		}, {
+			cat: '10', name: 'salad', value: 21,
+			desc: `
+				"The mango salad, which is typically sweet and sour with some vinegar, was pretty much just sweet"<br/>
+				"Herbal Salad is a unique salad I've never found at any other Thai restaurant"
+								
+				`
+		}

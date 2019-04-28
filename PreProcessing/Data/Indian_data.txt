@@ -1,0 +1,63 @@
+		let data = [{
+			cat: '1', name: 'naan', value: 52,
+			desc: `
+				"saag paneer, daal, Raita, hot naan and rice along with chopped onions and pickle"<br/>
+				"Naan is best fresh and hot"
+			`
+		}, {
+			cat: '2', name: 'buffet', value: 52,
+			desc: `
+				"The buffet has over 12 different dishes to pick and choose from"<br/>
+				"The decor and ambience is appealing for an Indian buffet restaurant"
+			`
+		}, 
+			
+ 		{
+			cat: '3', name: 'lunch', value: 41,
+			desc: `
+				"Have not had Indian often but the lunch special"<br/>
+				"I went to have buffet for lunch on Dec 28"
+				`
+		}, {
+			cat: '4', name: 'rice', value: 36,
+			desc: `
+				"had a steak with a spicy sauce on rice that came with appetizer and dessert"<br/>
+				"I wish they include rice with the entree"
+			`
+		}, {
+			cat: '5', name: 'masala', value: 33,
+			desc: `
+				"I decided to get the tikka masala and the palak paneer and some rice"<br/>
+				"I ordered lamb masala, chicken tikka masala and paneer for an appetizer"
+			`
+		}, {
+			cat: '6', name: 'butter', value: 30,
+			desc: `
+				"spicy butter chicken and great fish pakora"<br/>
+				"Butter chicken and Nan goes great together as do the desserts"
+			`
+		}, {
+			cat: '7', name: 'tikka', value: 27,
+			desc: `
+				"The mushroom tikka masala was particularly interesting if you want a veggie option"<br/>
+				"we had the Mango Chicken and the Tikka Masala Chicken curries"
+			`
+		},  {
+			cat: '8', name: 'lamb', value: 25,
+			desc: `
+				"The chicken curry was great, the lamb was perfect"<br/>
+				"The plum chicken, vindaloo, and lamb special are all very good meat dishes"
+			`
+		}, {
+			cat: '9', name: 'paneer', value: 23,
+			desc: `
+				"the alu ghobi and matar paneer are delicious veggie dishes"<br/>
+				"My wife ordered the paneer tikka masalla and loved it"
+				`
+		}, {
+			cat: '10', name: 'dinner', value: 12,
+			desc: `
+				"I can get dinner for two people with a satisfying lunch the next day"<br/>
+				"I've tried both the full sit down dinner and take out a few times each"
+								`
+		}];
