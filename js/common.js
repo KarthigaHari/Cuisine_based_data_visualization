@@ -1052,10 +1052,6 @@ $('.mutliSelect input[type="checkbox"]').on('click', function() {
 });
 
 
-      var e = document.getElementById("selected");
-      map_name = category+"_map";
-      var businessName = e.options[e.selectedIndex].text;
-      var businessId = eval(map_name).get(businessName);
 
       var text_string = "Of course that’s your contention. You’re a first year grad student. You just got finished readin’ some Marxian historian, Pete Garrison probably. You’re gonna be convinced of that ’til next month when you get to James Lemon and then you’re gonna be talkin’ about how the economies of Virginia and Pennsylvania were entrepreneurial and capitalist way back in 1740. That’s gonna last until next year. You’re gonna be in here regurgitating Gordon Wood, talkin’ about, you know, the Pre-Revolutionary utopia and the capital-forming effects of military mobilization… ‘Wood drastically underestimates the impact of social distinctions predicated upon wealth, especially inherited wealth.’ You got that from Vickers, Work in Essex County, page 98, right? Yeah, I read that, too. Were you gonna plagiarize the whole thing for us? Do you have any thoughts of your own on this matter? Or do you, is that your thing? You come into a bar. You read some obscure passage and then pretend, you pawn it off as your own, as your own idea just to impress some girls and embarrass my friend? See, the sad thing about a guy like you is in 50 years, you’re gonna start doin’ some thinkin’ on your own and you’re gonna come up with the fact that there are two certainties in life. One: don’t do that. And two: you dropped a hundred and fifty grand on a fuckin’ education you coulda got for a dollar fifty in late charges at the public library.";
       //var fs = require('fs');
@@ -1206,10 +1202,6 @@ var word_count = {};
 
 	  }
 	  
-		  function load_dropdown(category){
-var dropdown = document.getElementById("selectNumber");
-console.log("dropdown"+category);
-
 var French_map = new Map([["The House Brasserie","-4TMQnQJW1yd6NqGRDvAeA"],
 ["Metro Brasserie & Bar","atNpoWy_XrhT9EUIEP6azg"],
 ["Voltaire Restaurant","eb7wb5yABe12tSoeCpLSbw"],
@@ -1404,6 +1396,10 @@ var Chinese_map = new Map([["Yao Fine Chinese Cuisine","cmsAFAymfVoBitSF8R6GKw"]
 ["Devil's Mo","CpJRzbebSyHwOFNsOixK1w"],
 ["Song San","ZKWGMUV_XqxtISRcDGUnrA"],
 ["George & Son's Asian Cuisine","UUtWoDyREiy9MPdtTRFUYQ"]]);
+
+		  function load_dropdown(category){
+var dropdown = document.getElementById("selectNumber");
+console.log("dropdown"+category);
 // Loop through the array
 var word=category+"_map";
 //console.log("val"+eval(word));
@@ -1414,7 +1410,36 @@ for (var i = 0; i < keys.length; ++i) {
     // Append the element to the end of Array list
     dropdown[dropdown.length] = new Option(keys[i], keys[i]);
 }
+dropdown.className=category;
 
 		  }
 		  
 //		  load_dropdown("Mexican");
+function readTextFile(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                alert(allText);
+            }
+        }
+    }
+    rawFile.send(null);
+}
+
+function loadWC(restaurant){
+	var category=document.getElementById("selectNumber").className;
+	console.log(category);
+	console.log(restaurant.value);
+	var map=eval(category+"_map");
+	var business_id=map.get(restaurant.value);
+	readTextFile("../data/Restaurant_review_data/"+category+"/"+business_id+".txt");
+	
+	
+}
